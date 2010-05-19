@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1" />
+<title>JRuby on Rails on Appspot - yes, it's possible</title>
+	<%= javascript_include_tag :defaults %>
+	<%= stylesheet_link_tag 'application'%>
+	<%= yield :header  %>
+</head>
+
+<body>
+<div id="container">
+	<%- flash.each do |name, msg| -%>
+      <%= content_tag :div, msg, :id => "flash_#{name}" %>
+    <%- end -%>
+    
+    <%- if show_title? -%>
+      <h1><%=h yield(:title) %></h1>
+    <%- end -%>
+	<div class="contentheader"></div>		
+		<div class="maincontainer">
+			<div id="menu">
+				<div id="nav"><a href="#" title="Work In Progress">Work In Progress</a></div>
+			</div>
+				<div class="content">
+				<hr /><br />
+<p>This is a work in progress! Stay tuned for a full fledged tutorial on JRuby on Rails on Appspot</p>
+				</div>
+		</div>
+</div>
+			<div class="bottom"></div>
+			<div class="footer">
+			<div class="valid">
+			</div>
+</body>
+</html>
