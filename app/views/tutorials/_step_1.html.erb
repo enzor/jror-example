@@ -1,0 +1,40 @@
+<h2> 
+	<strong>Step 1: </strong> Initial Setup
+	<em>Prepare your tools:</em> 
+</h2> 
+			<p>
+For first thing, you have to own a google appengine account. Just <%= link_to "click here" , "http://code.google.com/appengine/" , :target => "_blank" %> and create one.
+You will also be asked to create an appspot domain, just pick one you want and it will have the pattern "yourdomain.appspot.com".
+Then you have to install <%= link_to "RVM", "http://rvm.beginrescueend.com/", :target => "_blank" %>, a wonderful piece of software that let you install multiple ruby runtime with separate gemset. 
+<pre class="syntax brush-ruby">
+sudo gem install rvm
+</pre>
+			</p>
+			<p>
+Then, install the JRuby compiler and use it!
+<pre class="syntax brush-ruby">
+rvm install jruby
+rvm use jruby
+</pre>
+			</p>
+			<p>
+Last,but not least, install all the gemset we require to install all the gems we'll need.
+<pre class="syntax brush-ruby">
+sudo gem install rails \
+google-appengine rails_dm_datastore activerecord-nulldb-adapter
+</pre>		
+			</p>
+			<p>
+I Strongly suggest also that you install the upsaid gems into your main ruby installation by typing
+<pre class="syntax brush-ruby">
+rvm system
+</pre>
+and then run the upsaid command to install all the gems
+			<p>
+After this, you are ready to proceed to the next step!
+			</p>
+ 
+	<li class="clearfix"> 
+		<button type="button" class="next right">Next&raquo;</button> 
+	</li> 
+ 			

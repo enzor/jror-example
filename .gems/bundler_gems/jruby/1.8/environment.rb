@@ -19,7 +19,7 @@ module Bundler
 
   $LOAD_PATH.unshift File.expand_path("#{dir}/gems/activesupport-2.3.5/lib")
   $LOAD_PATH.unshift File.expand_path("#{dir}/gems/rails_appengine-0.0.3/lib")
-  $LOAD_PATH.unshift File.expand_path("#{dir}/gems/extlib-0.9.14/lib")
+  $LOAD_PATH.unshift File.expand_path("#{dir}/gems/extlib-0.9.15/lib")
   $LOAD_PATH.unshift File.expand_path("#{dir}/gems/rack-1.0.1/bin")
   $LOAD_PATH.unshift File.expand_path("#{dir}/gems/rack-1.0.1/lib")
   $LOAD_PATH.unshift File.expand_path("#{dir}/gems/actionpack-2.3.5/lib")

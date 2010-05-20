@@ -1,0 +1,32 @@
+
+				<h2> 
+					<strong>Step 3: </strong> Publish! <b></b> 
+					<em>Swift and simple like eating a pie</em> 
+				</h2> 
+ 
+				<p>
+					Before publishing, you have to modify your config.ru file, located in the rails directory you previously created. In there you have to change the third line  value of this file into the name of the domain you configured early in this tutorial.In the case of this application, it will be:
+<pre class="syntax brush-ruby">
+AppEngine::Rack.configure_app(
+    :application => 'jror-example',
+    :precompilation_enabled => true,
+    :sessions_enabled => true,
+    :version => "1")
+</pre>
+				</p>
+				
+				<p>
+					After this, the publish is really simple. All you have to do is type
+<pre class="syntax bash">
+./script/publish.sh
+</pre>
+					and the system will package everything, ask for your credentials and update everything to your domains. After it finish, head your broser to http://yourdomain.blogspot.com and you'll see your application online.<br />
+						Simple isn't it?
+				</p>
+				
+				<li style="margin-top:30px"> 
+					<button type="button" class="next right" style="float:right">Conclusions&raquo;</button> 
+				</li>
+				<li> 
+					<button type="button" class="prev" style="float:left;">&laquo; Step Back</button> 
+				</li>

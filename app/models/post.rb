@@ -2,7 +2,10 @@ class Post
   include DataMapper::Resource
   
   property :id,    Serial
-  property :title, String,        :required => true, :length => 500
+  property :author, String,        :required => true, :length => 500
   property :body,  Text,          :required => true, :lazy => false
   timestamps :at 
+  
+  validates_present :author, :message => "author must not be blank"
+  validates_present :body, :message => "body must not be blank"
 end

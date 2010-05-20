@@ -1,0 +1,56 @@
+
+				<h2> 
+					<strong>Step 2: </strong> Create a the application <b></b> 
+					<em>The art of switching rubies:</em> 
+				</h2> 
+
+				<p>
+					If you followed the tutorial step-by-step, you will be in the ruby main installation.
+					You can check it by typing
+<pre class="syntax brush-bash">
+ruby -v
+</pre>
+				And you should see something like:
+<pre class="syntax brush-ruby">
+
+ruby 1.8.6 (2009-06-08 patchlevel 369) [universal-darwin9.0] #i run a mac, so this can change a little based on the os
+</pre>
+				If this is the output, then you are in the right path. If not, type "rvm system" and return back to the ruby main installation.
+				</p>
+				
+				<p>
+					After this we will going to fetch a script from the net, which will create for us an optimized and hacked version of rails just for us.
+				</p>
+				
+				<p>
+					For first, create a new directory, then enter in it
+<pre class="syntax brush-bash">
+mkdir my_app;
+cd my_app;
+</pre>
+				</p>
+				<p>
+					Then, fetch this file from internet and execute it:
+<pre class="syntax brush-bash">
+
+curl -O http://appengine-jruby.googlecode.com/hg/demos/rails2/rails2_appengine.rb
+ruby rails2_appengine.rb
+</pre>
+				</p>
+				
+				<p>
+					After a minute or two, your application will be ready. Switch to the rvm jruby and fire the server!
+<pre class="syntax brush-bash">
+rvm jruby
+./script/server.sh
+</pre>
+					Wait for loading and head your browser to "http://localhost:8080" and voilà! Your JRuby on rails is done and ready to be deployed
+				</p>
+				
+				<li style="margin-top:30px"> 
+					<button type="button" class="next right" style="float:right">Step Next&raquo;</button> 
+				</li>
+				<li> 
+					<button type="button" class="prev" style="float:left;">&laquo; Step Back</button> 
+				</li>
+				

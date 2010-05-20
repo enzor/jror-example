@@ -1,0 +1,87 @@
+
+
+<div id="drawer">Please fill in the empty fields marked with a <samp style="color:red">red</samp> border.</div> 
+ 
+<!-- the form --> 
+<form action="#"> 
+ 
+	<div id="wizard"> 
+ 
+		<ul id="status"> 
+			<li class="active"><strong>1.</strong> Set Up</li> 
+			<li><strong>2.</strong> Create</li> 
+			<li><strong>3.</strong> Publish	</li> 
+			<li><strong>4.</strong> Conclusions</li>
+		</ul> 
+ 
+		<div class="items"> 
+ 
+			<!-- page1 --> 
+			<div class="page"> 
+				<%= render :partial => 'step_1' %>
+			</div> 
+ 
+			<!-- page2 --> 
+			<div class="page"> 
+ 				<%= render :partial => 'step_2' %>
+
+			</div> 
+ 
+			<!-- page3 --> 
+			<div class="page"> 
+ 				<%= render :partial => 'step_3' %>
+
+			</div> 
+			<!-- page4 -->
+			<div class="page">
+				<%= render :partial => 'step_4' %>
+			</div>
+ 
+ 
+		</div><!--items--> 
+ 
+	</div><!--wizard--> 
+ 
+</form>
+
+<script type="text/javascript" charset="utf-8">
+$(function() {
+ 
+ 
+var root = $("#wizard").scrollable();
+ 
+ 
+ 
+// some variables that we need
+var api = root.scrollable(), drawer = $("#drawer");
+ 
+// validation logic is done inside the onBeforeSeek callback
+api.onBeforeSeek(function(event, i) {
+ 
+	// we are going 1 step backwards so no need for validation
+	if (api.getIndex() < i) {
+ 
+		// 1. get current page
+		var page = root.find(".page").eq(api.getIndex());
+ 
+	}
+ 
+	// update status bar
+	$("#status li").removeClass("active").eq(i).addClass("active");
+ 
+});
+ 
+ 
+ 
+// if tab is pressed on the next button seek to next page
+root.find("button.next").keydown(function(e) {
+	if (e.keyCode == 9) {
+ 
+		// seeks to next tab by executing our validation routine
+		api.next();
+		e.preventDefault();
+	}
+});
+ 
+});
+</script>

@@ -1,13 +1,12 @@
-<p>
-  <b>Title:</b>
-  <%=h @post.title %>
-</p>
+<div style="width:600px;">
+	<p>
+	  <b>Author:</b>
+	  <%=h @post.author %>
+	</p>
 
-<p>
-  <b>Body:</b>
-  <%=h @post.body %>
-</p>
-
-
-<%= link_to 'Edit', edit_post_path(@post) %> |
+	<p>
+	  <b>Body:</b>
+	  <%=h @post.body %>
+	</p>
+</div>
 <%= link_to 'Back', posts_path %>
