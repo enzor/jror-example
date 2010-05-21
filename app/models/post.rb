@@ -3,7 +3,7 @@ class Post
   
   
   property :id,    Serial
-  property :author, String,        :required => true, :length => 500
+  property :author, String,        :required => true, :length => 20
   property :body,  Text,          :required => true, :lazy => false
   timestamps :at 
   
