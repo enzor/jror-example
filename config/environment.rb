@@ -20,6 +20,7 @@ Rails::Initializer.run do |config|
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"
 
+
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
   # config.plugins = [ :exception_notification, :ssl_requirement, :all ]
@@ -36,6 +37,7 @@ Rails::Initializer.run do |config|
     require 'rails_dm_datastore'
     # Set Logger from appengine-apis, all environments
     require 'appengine-apis/logger'
+    
     config.logger = AppEngine::Logger.new
     # Skip frameworks you're not going to use.
     config.frameworks -= [ :active_record, :active_resource, :action_mailer ]

@@ -1,19 +1,19 @@
-<h1>Guestbook</h1>
 
-<table>
+<table class="guestbook">
   <tr>
 	<th>Author</th>
-    <th>Comment</th>
+    <th style="text-align:center">Comment</th>
   </tr>
 
 <% @posts.each do |post| %>
   <tr>
-	<td><%=h post.author %></td>
-    <td><%= link_to (h post.body[0..90]+ "..."), post %></td>
+	<td class="author"><%=h post.author %></td>
+	<td style="text-align:center"><%= link_to (h post.body[0..80]+ "..."), post %></td>
   </tr>
 <% end %>
 </table>
 
+
 <br />
 
-<%= link_to 'New post', new_post_path %>
+<%= link_to 'New post', new_post_path , :style => "text-decoration:none;font-size:16px;align:center" %>

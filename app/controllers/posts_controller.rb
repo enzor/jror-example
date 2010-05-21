@@ -53,33 +53,36 @@ class PostsController < ApplicationController
       end
     end
   end
+  
+  ##temporarily comment update and delete, to prevent outside hacking =). When i'll implement the authorization,
+  ##this block will be decommented an everything will run fine
 
-  # PUT /posts/1
-  # PUT /posts/1.xml
-  def update
-    @post = Post.find(params[:id])
-
-    respond_to do |format|
-      if @post.update_attributes(params[:post])
-        flash[:notice] = 'Post was successfully updated.'
-        format.html { redirect_to(@post) }
-        format.xml  { head :ok }
-      else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @post.errors, :status => :unprocessable_entity }
-      end
-    end
-  end
-
-  # DELETE /posts/1
-  # DELETE /posts/1.xml
-  def destroy
-    @post = Post.find(params[:id])
-    @post.destroy
-
-    respond_to do |format|
-      format.html { redirect_to(posts_url) }
-      format.xml  { head :ok }
-    end
-  end
+  # # PUT /posts/1
+  # # PUT /posts/1.xml
+  # def update
+  #   @post = Post.find(params[:id])
+  # 
+  #   respond_to do |format|
+  #     if @post.update_attributes(params[:post])
+  #       flash[:notice] = 'Post was successfully updated.'
+  #       format.html { redirect_to(@post) }
+  #       format.xml  { head :ok }
+  #     else
+  #       format.html { render :action => "edit" }
+  #       format.xml  { render :xml => @post.errors, :status => :unprocessable_entity }
+  #     end
+  #   end
+  # end
+  # 
+  # # DELETE /posts/1
+  # # DELETE /posts/1.xml
+  # def destroy
+  #   @post = Post.find(params[:id])
+  #   @post.destroy
+  # 
+  #   respond_to do |format|
+  #     format.html { redirect_to(posts_url) }
+  #     format.xml  { head :ok }
+  #   end
+  # end
 end

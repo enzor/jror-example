@@ -21,7 +21,8 @@
 			      <%= content_tag :div, msg, :id => "flash_#{name}" %>
 			    <%- end -%>
 				
-				<div id="nav"><%= link_to "Tutorial", root_url %> | 
+				<div id="nav"><%= link_to "Presentation", root_url %> | 
+				<%= link_to "Tutorial", {:controller => 'tutorials'} %> | 
 					<%= link_to "Guestbook", {:controller => 'posts'} %></div>
 			</div>
 				<div class="content">
@@ -32,6 +33,8 @@
 </div>
 			<div class="bottom"></div>
 			<div class="footer">
+				<%= link_to "Enzo Rivello", "http://www.rublings.com", :target => :blank %>, 2010
+			</div>
 			<div class="valid">
 			</div>
 </body>

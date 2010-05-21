@@ -1,5 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
-  map.root :controller => 'tutorials'
+  map.root :controller => 'tutorials', :action => 'presentation'
   
   map.resources :posts
 

@@ -18,6 +18,27 @@ a {
   color: #0000FF;
 }
 
+table.guestbook tr th {
+	font-size:16px;
+}
+
+table.guestbook tr td {
+	padding-top:20px;
+	border-bottom: 1px solid red;
+	padding-bottom:20px;
+}
+
+table.guestbook tr td.author {
+	font-weight: bold;
+	color:red;
+}
+
+table.guestbook a {
+	text-decoration:none;
+}
+
+
+
 .clear {
   clear: both;
   height: 0;
