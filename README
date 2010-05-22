@@ -2,14 +2,10 @@
 
 This is just a simple tutorial for putting a base JRails installation inside google app engine.
 
-To start it, you have to run, this following commands(After cloning it and moved into the app folder):
+To start it, you have to run, this following command(After cloning it and moved into the app folder):
 
-
-	sudo gem install rvm  //a great ruby dataset switcher. i love it.
-	rvm install jruby
-	rvm use jruby		  //self-explicative
 	sudo gem install rails google-appengine rails_dm_datastore activerecord-nulldb-adapter //all necessary gems
-	
+
 then, finally you can start the app:
 	./script/server.sh 
 	
